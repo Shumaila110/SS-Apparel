@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic1.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic2.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic3.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic4.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic5.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic6.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic7.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic8.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic9.png",
+      "category": "recent"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic10.png",
+      "category": "recent"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic11.png",
+      "category": "recent"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic12.png",
+      "category": "recent"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic13.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic14.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic15.png",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic16.jpg",
+      "category": "trend"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic17.jpg",
+      "category": "latest"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic18.jpg",
+      "category": "latest"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic19.jpg",
+      "category": "latest"
+    },
+    {
+      "title": "",
+      "price": "2000.99",
+      "image": "./images/pic20.jpg",
+      "category": "latest"
+    }
+  ]
+}

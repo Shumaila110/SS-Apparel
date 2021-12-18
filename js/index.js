@@ -84,6 +84,7 @@ const closeuser = document.querySelector(".user-close");
 
 signin.addEventListener("click", () => {
   user.classList.add("show");
+  
 });
 
 closeuser.addEventListener("click", () => {

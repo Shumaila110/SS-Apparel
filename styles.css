@@ -1437,7 +1437,7 @@ color: #59b210;
   }
 }
 
-/* ========= Footer ======== */
+/* =========  ======== */
 .footer {
   background-color: var(--black);
   padding: 6rem 1rem;
@@ -1481,9 +1481,16 @@ color: #59b210;
 
 
 .contactus{
-  display: inline-block;
-  margin-left: 340px;
-  /* block-size: auto; */
+  display: grid;
+  justify-content: center;
+  color: white;
+}
+
+  .contactus h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 
@@ -1492,9 +1499,7 @@ color: #59b210;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 2rem;
   }
-  .contactus{
-    margin-left: 10%;
-  }
+  
 }
 
 @media only screen and (max-width: 768px) {

@@ -27,7 +27,7 @@ const displayProducts = (products, center) => {
           </div>
           <ul>
        
-              <a href="#">
+              <a>
                 <i class="far fa-heart"></i>
               </a>
             </li>
@@ -44,30 +44,30 @@ const displayProducts = (products, center) => {
 const catContainer = document.querySelector(".sort-category");
 const filterBtns = [...document.querySelectorAll(".filter-btn")];
 
-if (catContainer) {
-  catContainer.addEventListener("click", async e => {
-    const target = e.target.closest(".section-title");
-    if (!target) return;
-    const id = target.dataset.id;
-    const products = await getProducts();
+// if (catContainer) {
+//   catContainer.addEventListener("click", async e => {
+//     const target = e.target.closest(".section-title");
+//     if (!target) return;
+//     const id = target.dataset.id;
+//     const products = await getProducts();
 
-    if (id) {
-      filterBtns.forEach(btn => {
-        btn.classList.remove("active");
-      });
-      target.classList.add("active");
-      const menuCat = products.filter(product => product.category === id);
-      productCenter.classList.add("animate__animated", "animate__backInUp");
-      setTimeout(() => {
-        productCenter.classList.remove(
-          "animate__animated",
-          "animate__backInUp"
-        );
-      }, 1000);
-      displayProducts(menuCat, productCenter);
-    }
-  });
-}
+//     if (id) {
+//       filterBtns.forEach(btn => {
+//         btn.classList.remove("active");
+//       });
+//       target.classList.add("active");
+//       const menuCat = products.filter(product => product.category === id);
+//       productCenter.classList.add("animate__animated", "animate__backInUp");
+//       setTimeout(() => {
+//         productCenter.classList.remove(
+//           "animate__animated",
+//           "animate__backInUp"
+//         );
+//       }, 1000);
+//       displayProducts(menuCat, productCenter);
+//     }
+//   });
+// }
 
 const productCenter = document.querySelector(".product-center");
 const latestCenter = document.querySelector(".latest-center");

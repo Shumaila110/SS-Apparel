@@ -99,12 +99,19 @@
       </div>
     </div>
 
-    <div class="shop-center product-center container">
-
+    <div class="shop-center product-center container" id="list">
     </div>
-  </section>
+
+  </div>
+</section>
+<section>
+  <div class="buttons-group">
+  <a><button id="btn" class="buttons-group">See more!</button></a>
+  </div>
+</section>
+
 <hr>
-  <div id="location"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.635721207675!2d11.599608815648306!3d48.117262479221814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf9b088c2d29%3A0x2d3f203773bbf46a!2sBalanstra%C3%9Fe%2073%2Fhaus%2021a%2C%2081541%20M%C3%BCnchen!5e0!3m2!1sen!2sde!4v1639904847901!5m2!1sen!2sde" width="1255" height="350" style="border:0; margin: 5px;" allowfullscreen="" loading="lazy"></iframe></div>
+  <div id="location"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.635721207675!2d11.599608815648306!3d48.117262479221814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf9b088c2d29%3A0x2d3f203773bbf46a!2sBalanstra%C3%9Fe%2073%2Fhaus%2021a%2C%2081541%20M%C3%BCnchen!5e0!3m2!1sen!2sde!4v1639904847901!5m2!1sen!2sde" width="1255" height="250" style="border:0; margin: 5px;" allowfullscreen="" loading="lazy"></iframe></div>
 <hr>
   <!-- Facility -->
   <section class="facility section" id="facility">
@@ -167,44 +174,6 @@
 
 
 
-  <!-- User Account
-  <div class="useraccount">
-    <div class="popup-content">
-      <div class="user-close">
-        <i class="fas fa-times"></i>
-      </div>
-      <div class="popup-left">
-        <div class="popup-img">
-          <img src="./images/cat2.jpg" alt="useraccount">
-        </div>
-      </div>
-      <div class="popup-right">
-        <div class="right-content">
-          <h2>Create Account</h2><br>
-
-          <form action="" onsubmit="return ValidateUsername()">
-            <label for="username" type="text">Enter your name:
-            </label>
-            <input class="popup-form" type="text" id="username">
-            <span id="errmessage" style="color: #f60091"></span>
-            <br>
-            <label for="username" type="text">Enter your email:
-            </label>
-            <input type="email" placeholder="Enter your email..." class="popup-form" required>
-            <br>
-            <label for="password" type="text">Enter password:
-            </label>
-            <input class="popup-form" type="password" id="password" required>
-            <span id="passworderr" style="color: #f60091"></span>
-            <br>
-            <div class="btn"><input type="submit" value="Sign Up" id="button" required></div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
   <!-- Footer -->
   <footer id="footer" class="section footer">
     <div class="container">
@@ -228,7 +197,6 @@
         </div>
         <div class="footer-center">
           <h3>INFORMATION</h3>
-          <a href="#">About Us</a>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
           <a href="#">Site Map</a>
@@ -244,7 +212,7 @@
           <a href="#">Returns</a>
         </div>
         <div class="footer-center">
-          <h3>CONTACT US</h3>
+          <h3>CONTACT</h3>
           <div>
             <span>
               <i class="fas fa-map-marker-alt"></i>
@@ -281,7 +249,7 @@
     <hr>
     <div class="contactus nav-icons">
       <div>
-        <h3>Follow us:</h3>
+        <h3>Follow:</h3>
       </div>
       
       <div>
@@ -300,6 +268,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
 
   <!-- Custom Script -->
+  <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
   <script src="./js/product.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/index.js"></script>

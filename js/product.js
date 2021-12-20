@@ -1,91 +1,53 @@
-const getProducts = async () => {
-  const res = await fetch("products.json");
-  const data = await res.json();
-  const products = data.products;
-  return products;
-};
+const getButton = document.getElementById('btn');
+const listOfEntities = document.getElementById('list');
+var count = 0
 
-// Display Product
-const displayProducts = (products, center) => {
-  let display = products.map(
-    ({ title, image, price }) => `<div class="product">
-          <div class="product-header">
-            <img src=${image} alt="product">
-          </div>
-          <div class="product-footer">
-            <h3>${title}</h3>
-            <div class="rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <div class="product-price">
-              <h4>$${price}</h4>
-            </div>
-          </div>
-          <ul>
-       
-              <a>
-                <i class="far fa-heart"></i>
-              </a>
-            </li>
-       
-          </ul>
-        </div>`
-  );
+  const getData = () => {
+    console.log("GET DATA");
 
-  display = display.join("");
-  center.innerHTML = display;
-};
+    if (count >=20) {
+        alert("You arrived end of the list")
+        return
+    }
+    axios.get(`https://fakestoreapi.com/products`)
+        .then(result => {
+      // console.log(result.data[0])
+      const list = result.data;
 
-// Filtering
-const catContainer = document.querySelector(".sort-category");
-const filterBtns = [...document.querySelectorAll(".filter-btn")];
+      const flexItem = document.createElement("div");
+      flexItem.className = "product-center"
 
-// if (catContainer) {
-//   catContainer.addEventListener("click", async e => {
-//     const target = e.target.closest(".section-title");
-//     if (!target) return;
-//     const id = target.dataset.id;
-//     const products = await getProducts();
+      for (i = count; i < count + 4; i++) {
+        const listItem = document.createElement("div");
+        listItem.className = "pcontainer";
 
-//     if (id) {
-//       filterBtns.forEach(btn => {
-//         btn.classList.remove("active");
-//       });
-//       target.classList.add("active");
-//       const menuCat = products.filter(product => product.category === id);
-//       productCenter.classList.add("animate__animated", "animate__backInUp");
-//       setTimeout(() => {
-//         productCenter.classList.remove(
-//           "animate__animated",
-//           "animate__backInUp"
-//         );
-//       }, 1000);
-//       displayProducts(menuCat, productCenter);
-//     }
-//   });
-// }
+        const pItem = document.createElement("img");
+        pItem.className = "pimg";
+        pItem.id = "img";
+        // const img = document.getElementById('id');
+       pItem.src = list[i].image
 
-const productCenter = document.querySelector(".product-center");
-const latestCenter = document.querySelector(".latest-center");
-const recentCenter = document.querySelector(".recent-center");
-const shopCenter = document.querySelector(".shop-center");
+        const pItem2 = document.createElement("p");
+        pItem2.className = "title";
+        pItem2.textContent = list[i].title;
 
-const filterArray = async type => {
-  const products = await getProducts();
-  return products.filter(product => product.category === type);
-};
+        const pItem3 = document.createElement("p");
+        pItem3.className = "description";
+        pItem3.textContent = list[i].price;
 
-window.addEventListener("DOMContentLoaded", async () => {
-  const products = await getProducts();
-  const defaultProducts = await filterArray("trend");
-  const latestProducts = await filterArray("latest");
-  const recentProducts = await filterArray("recent");
-  displayProducts(defaultProducts, productCenter);
-  displayProducts(latestProducts, latestCenter);
-  displayProducts(recentProducts, recentCenter);
-  displayProducts(products, shopCenter);
-});
+
+        listItem.appendChild(pItem);
+        listItem.appendChild(pItem2);
+        listItem.appendChild(pItem3);
+        flexItem.appendChild(listItem);
+
+      }
+
+      listOfEntities.appendChild(flexItem);
+      count = count + 4
+    }).catch(error => {
+      console.log('error', error);
+    }) 
+  };
+getData()
+getButton.addEventListener('click', getData);
